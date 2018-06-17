@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MailService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:60959/MailService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:60959/MailService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:60959/MailService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/OMail.MailService.DataLayer.Models" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMailService_RegisterUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterUser" />
+  </wsdl:message>
+  <wsdl:message name="IMailService_RegisterUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMailService_LoginUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoginUser" />
+  </wsdl:message>
+  <wsdl:message name="IMailService_LoginUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMailService_GetSendedMessages_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSendedMessages" />
+  </wsdl:message>
+  <wsdl:message name="IMailService_GetSendedMessages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSendedMessagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMailService_GetReceivedMessages_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReceivedMessages" />
+  </wsdl:message>
+  <wsdl:message name="IMailService_GetReceivedMessages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReceivedMessagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMailService_SendMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMessage" />
+  </wsdl:message>
+  <wsdl:message name="IMailService_SendMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMailService_CheckIfUserExists_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckIfUserExists" />
+  </wsdl:message>
+  <wsdl:message name="IMailService_CheckIfUserExists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckIfUserExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMailService_GetUserByUsername_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByUsername" />
+  </wsdl:message>
+  <wsdl:message name="IMailService_GetUserByUsername_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByUsernameResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMailService">
+    <wsdl:operation name="RegisterUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailService/RegisterUser" message="tns:IMailService_RegisterUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailService/RegisterUserResponse" message="tns:IMailService_RegisterUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailService/LoginUser" message="tns:IMailService_LoginUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailService/LoginUserResponse" message="tns:IMailService_LoginUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSendedMessages">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailService/GetSendedMessages" message="tns:IMailService_GetSendedMessages_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailService/GetSendedMessagesResponse" message="tns:IMailService_GetSendedMessages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReceivedMessages">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailService/GetReceivedMessages" message="tns:IMailService_GetReceivedMessages_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailService/GetReceivedMessagesResponse" message="tns:IMailService_GetReceivedMessages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMessage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailService/SendMessage" message="tns:IMailService_SendMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailService/SendMessageResponse" message="tns:IMailService_SendMessage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckIfUserExists">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailService/CheckIfUserExists" message="tns:IMailService_CheckIfUserExists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailService/CheckIfUserExistsResponse" message="tns:IMailService_CheckIfUserExists_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByUsername">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailService/GetUserByUsername" message="tns:IMailService_GetUserByUsername_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailService/GetUserByUsernameResponse" message="tns:IMailService_GetUserByUsername_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IMailService" type="tns:IMailService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RegisterUser">
+      <soap:operation soapAction="http://tempuri.org/IMailService/RegisterUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginUser">
+      <soap:operation soapAction="http://tempuri.org/IMailService/LoginUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSendedMessages">
+      <soap:operation soapAction="http://tempuri.org/IMailService/GetSendedMessages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReceivedMessages">
+      <soap:operation soapAction="http://tempuri.org/IMailService/GetReceivedMessages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMessage">
+      <soap:operation soapAction="http://tempuri.org/IMailService/SendMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckIfUserExists">
+      <soap:operation soapAction="http://tempuri.org/IMailService/CheckIfUserExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByUsername">
+      <soap:operation soapAction="http://tempuri.org/IMailService/GetUserByUsername" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MailService">
+    <wsdl:port name="BasicHttpBinding_IMailService" binding="tns:BasicHttpBinding_IMailService">
+      <soap:address location="http://localhost:60959/MailService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

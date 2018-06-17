@@ -1,0 +1,29 @@
+﻿<Controls:MetroWindow x:Class="OMail.Client.Window3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:local="clr-namespace:OMail.Client"
+        mc:Ignorable="d"
+       Title="OMail" ResizeMode="CanMinimize"  ShowTitleBar="True" Width="500" Height="300" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBox Foreground="Silver" AcceptsReturn="True" KeyboardNavigation.TabIndex="2" Name="TxtMsgContent"  HorizontalAlignment="Left" BorderThickness="0,0,0,0" Height="208" Margin="0,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="494"/>
+        <Button Foreground="SlateGray" Name="BtnSend" Click="Button_Click" IsTabStop="False" Content="Send" BorderThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="91" Height="55" Margin="0,1,0,0"/>
+        <TextBox KeyboardNavigation.TabIndex="0" Foreground="Silver" Name="TxtReceiverUsername" Focusable="True" HorizontalAlignment="Left" BorderThickness="0" Height="19" Margin="118,1,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="145"/>
+        <TextBox Foreground="Silver"  KeyboardNavigation.TabIndex="1" Name="TxtSubject" HorizontalAlignment="Left" BorderThickness="0" Height="19" Margin="145,30,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="337"/>
+        <TextBox Foreground="SlateGray" HorizontalAlignment="Left" IsReadOnly="True" BorderThickness="0" Height="19" Margin="91,1,0,0" TextWrapping="Wrap" Text="To:" VerticalAlignment="Top" Width="27"/>
+        <TextBox Foreground="SlateGray" HorizontalAlignment="Left" IsReadOnly="True" BorderThickness="0" Height="19" Margin="91,30,0,0" TextWrapping="Wrap" Text="Subject:" VerticalAlignment="Top" Width="54"/>
+        <Label Content="Label" HorizontalAlignment="Left" BorderThickness="1" BorderBrush="Gray" Margin="0,60,-3,0" VerticalAlignment="Top" Height="1" RenderTransformOrigin="0.5,0.5" Width="497">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Name="LblStatus" Visibility="Collapsed" Foreground="IndianRed" Content="Please Enter valid username" HorizontalAlignment="Left" Margin="268,1,0,0" VerticalAlignment="Top" Width="193"/>
+    </Grid>
+</Controls:MetroWindow>

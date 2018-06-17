@@ -1,0 +1,6 @@
+C:\Users\Oscar Rosner\documents\visual studio 2017\Projects\OMail\OMail.Utilities\bin\Debug\OMail.Utilities.dll
+C:\Users\Oscar Rosner\documents\visual studio 2017\Projects\OMail\OMail.Utilities\bin\Debug\OMail.Utilities.pdb
+C:\Users\Oscar Rosner\documents\visual studio 2017\Projects\OMail\OMail.Utilities\obj\Debug\OMail.Utilities.csprojAssemblyReference.cache
+C:\Users\Oscar Rosner\documents\visual studio 2017\Projects\OMail\OMail.Utilities\obj\Debug\OMail.Utilities.csproj.CoreCompileInputs.cache
+C:\Users\Oscar Rosner\documents\visual studio 2017\Projects\OMail\OMail.Utilities\obj\Debug\OMail.Utilities.dll
+C:\Users\Oscar Rosner\documents\visual studio 2017\Projects\OMail\OMail.Utilities\obj\Debug\OMail.Utilities.pdb

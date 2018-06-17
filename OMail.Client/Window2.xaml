@@ -1,0 +1,59 @@
+﻿<Controls:MetroWindow x:Class="OMail.Client.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                      mc:Ignorable="d"
+       Title="OMail" ResizeMode="CanMinimize"  ShowTitleBar="True" Width="400" Height="370" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TabControl SelectionChanged="TabControl_SelectionChanged" HorizontalAlignment="Left" Height="341" Margin="0,0,0,0" VerticalAlignment="Top" Width="400">
+            <TabItem Header="Inbox">
+                <Grid>
+                    <Grid.Background>
+                            <SolidColorBrush Color="SlateGray" Opacity="0.5" />
+                    </Grid.Background>
+                    <DataGrid  x:Name="DatagridInboxMessages" Foreground="Silver" HeadersVisibility="None" CanUserAddRows="False" AutoGenerateColumns="False" Margin="0,4,0,0">
+                        <DataGrid.AlternatingRowBackground>
+                            <SolidColorBrush Color="SlateGray" Opacity="0.5" />
+                        </DataGrid.AlternatingRowBackground>
+                        <DataGrid.Resources>
+                            <Style TargetType="DataGridRow">
+                                <EventSetter Event="MouseDoubleClick" Handler="Row_DoubleClick"/>
+                            </Style>
+                        </DataGrid.Resources>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="asd"  Binding="{Binding Subject}" Width="*" IsReadOnly="True"/>
+                            <DataGridTextColumn Header="asd" Binding="{Binding Sender.Name}" Width="100" IsReadOnly="True"/>
+                            <DataGridTextColumn Header="asd" Binding="{Binding SendTimeStamp, StringFormat=dd.MM.yyyy}" Width="100" IsReadOnly="True"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+            <TabItem  Name="asdo" Header="Outbox">
+                <Grid>
+                    <Grid.Background>
+                        <SolidColorBrush Color="SlateGray" Opacity="0.5" />
+                    </Grid.Background>
+                    <DataGrid  x:Name="DataGridOutboxMessages"  Foreground="Silver" HeadersVisibility="None" CanUserAddRows="False" AutoGenerateColumns="False" Margin="0,4,0,0">
+                        <DataGrid.AlternatingRowBackground>
+                                <SolidColorBrush Color="SlateGray" Opacity="0.5" />
+                        </DataGrid.AlternatingRowBackground>
+                        <DataGrid.Resources>
+                            <Style TargetType="DataGridRow">
+                                <EventSetter Event="MouseDoubleClick" Handler="Row_DoubleClick"/>
+                            </Style>
+                        </DataGrid.Resources>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="asd"  Binding="{Binding Subject}" Width="*" IsReadOnly="True"/>
+                            <DataGridTextColumn Header="asd" Binding="{Binding Receiver.Name}" Width="100" IsReadOnly="True"/>
+                            <DataGridTextColumn Header="asd" Binding="{Binding SendTimeStamp, StringFormat=dd.MM.yyyy}" Width="100" IsReadOnly="True"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Button x:Name="BtnWrite" Focusable="False" Click="BtnWrite_Click" HorizontalContentAlignment="Center" Content="Write" Foreground="SlateGray" BorderThickness="0" HorizontalAlignment="Left" Margin="272,7,0,0" VerticalAlignment="Top" Width="57" Height="28" />
+        <Button x:Name="BtnLogOut"  Focusable="False" Click="BtnLogOut_Click" Content="Logout" Foreground="SlateGray" BorderThickness="0" HorizontalAlignment="Left" Margin="335,7,0,0" VerticalAlignment="Top" Width="57" Height="28" />
+    </Grid>
+</Controls:MetroWindow>

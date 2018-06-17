@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f82156d4-ed9f-4847-8259-44d9b2cfdb2e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:60959/MailService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MailService.xsd" MetadataType="Schema" ID="a0f90459-7288-4cf4-81b8-dc6dde2cf34a" SourceId="1" SourceUrl="http://localhost:60959/MailService.svc?xsd=xsd2" />
+    <MetadataFile FileName="MailService.disco" MetadataType="Disco" ID="1e7ca66a-35ef-424e-aa0c-27c08e9e65ee" SourceId="1" SourceUrl="http://localhost:60959/MailService.svc?disco" />
+    <MetadataFile FileName="MailService1.xsd" MetadataType="Schema" ID="09af49fe-3b01-459e-a1ca-e6f11bbfc036" SourceId="1" SourceUrl="http://localhost:60959/MailService.svc?xsd=xsd1" />
+    <MetadataFile FileName="MailService.wsdl" MetadataType="Wsdl" ID="6e637c1a-c119-47ce-86ed-21358d948cc1" SourceId="1" SourceUrl="http://localhost:60959/MailService.svc?wsdl" />
+    <MetadataFile FileName="MailService2.xsd" MetadataType="Schema" ID="640ce001-3968-4db6-bafe-49455ead6448" SourceId="1" SourceUrl="http://localhost:60959/MailService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
