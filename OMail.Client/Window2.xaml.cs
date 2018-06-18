@@ -35,7 +35,7 @@ namespace OMail.Client
 
         private void BtnWrite_Click(object sender, RoutedEventArgs e)
         {
-            new Window3(username, client).Show();
+            new Window3(username, client, Left, Top, Width).Show();
         }
 
         private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -78,15 +78,7 @@ namespace OMail.Client
         {
             var message = (sender as DataGridRow).Item as Message;
 
-            //Message was send by this user, we are in the outbox
-            if(message.Sender.Name == username)
-            {
-                new Window4((sender as DataGridRow).Item as Message, client, true).Show();
-            }
-            else
-            {
-                new Window4((sender as DataGridRow).Item as Message, client, false).Show();
-            }
+            new Window4(message, Left, Top, Width).Show();
         }
     }
 }

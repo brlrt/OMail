@@ -24,8 +24,6 @@ C:\Users\Oscar Rosner\documents\visual studio 2017\Projects\OMail\OMail.Client\o
 C:\Users\Oscar Rosner\documents\visual studio 2017\Projects\OMail\OMail.Client\obj\Debug\Window2.baml
 C:\Users\Oscar Rosner\documents\visual studio 2017\Projects\OMail\OMail.Client\obj\Debug\Window3.g.cs
 C:\Users\Oscar Rosner\documents\visual studio 2017\Projects\OMail\OMail.Client\obj\Debug\Window3.baml
-C:\Users\Oscar Rosner\documents\visual studio 2017\Projects\OMail\OMail.Client\obj\Debug\dasads.g.cs
-C:\Users\Oscar Rosner\documents\visual studio 2017\Projects\OMail\OMail.Client\obj\Debug\dasads.baml
 C:\Users\Oscar Rosner\documents\visual studio 2017\Projects\OMail\OMail.Client\obj\Debug\App.baml
 C:\Users\Oscar Rosner\documents\visual studio 2017\Projects\OMail\OMail.Client\obj\Debug\Window4.g.cs
 C:\Users\Oscar Rosner\documents\visual studio 2017\Projects\OMail\OMail.Client\obj\Debug\Window4.baml

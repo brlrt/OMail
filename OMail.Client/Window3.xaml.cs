@@ -10,38 +10,15 @@ namespace OMail.Client
         private string senderName;
         private MailServiceClient client;
 
-        public Window3(string username, MailServiceClient client)
+        public Window3(string senderName, MailServiceClient client, double leftMainWindow, double topMainWindow, double widthMainWindow)
         {
             InitializeComponent();
+            Left = leftMainWindow + widthMainWindow;
+            Top = topMainWindow;
 
             this.client = client;
-            this.senderName = username;
+            this.senderName = senderName;
             FocusManager.SetFocusedElement(this, TxtReceiverUsername);
-        }
-
-        //Responds to the message
-        public Window3(string senderName, MailServiceClient client, Message message)
-        {
-            InitializeComponent();
-
-            this.client = client;
-            this.senderName = senderName;
-
-            TxtReceiverUsername.Text = message.Sender.Name;
-            TxtSubject.Text = "RE: " + message.Subject;
-        }
-
-        //Send Message again
-        public Window3(string senderName, MailServiceClient client, Message message, bool sendMessageAgain)
-        {
-            InitializeComponent();
-
-            this.client = client;
-            this.senderName = senderName;
-
-            TxtReceiverUsername.Text = message.Receiver.Name;
-            TxtSubject.Text = message.Subject;
-            TxtMsgContent.Text = message.Content;
         }
 
         private void Button_Click(object sender, System.Windows.RoutedEventArgs e)
@@ -52,7 +29,7 @@ namespace OMail.Client
                 {
                     Content = TxtMsgContent.Text,
                     Receiver = new User { Name = TxtReceiverUsername.Text },
-                    Sender = new User { Name = senderName},
+                    Sender = new User { Name = senderName },
                     SendTimeStamp = DateTime.Now,
                     Subject = TxtSubject.Text,
                 };

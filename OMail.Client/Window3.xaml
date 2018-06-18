@@ -6,15 +6,15 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:OMail.Client"
         mc:Ignorable="d"
-       Title="OMail" ResizeMode="CanMinimize"  ShowTitleBar="True" Width="500" Height="300" WindowStartupLocation="CenterScreen">
+       Title="OMail" ResizeMode="CanMinimize"  ShowTitleBar="True" Width="400" Height="370" WindowStartupLocation="Manual">
     <Grid>
-        <TextBox Foreground="Silver" AcceptsReturn="True" KeyboardNavigation.TabIndex="2" Name="TxtMsgContent"  HorizontalAlignment="Left" BorderThickness="0,0,0,0" Height="208" Margin="0,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="494"/>
-        <Button Foreground="SlateGray" Name="BtnSend" Click="Button_Click" IsTabStop="False" Content="Send" BorderThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="91" Height="55" Margin="0,1,0,0"/>
-        <TextBox KeyboardNavigation.TabIndex="0" Foreground="Silver" Name="TxtReceiverUsername" Focusable="True" HorizontalAlignment="Left" BorderThickness="0" Height="19" Margin="118,1,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="145"/>
-        <TextBox Foreground="Silver"  KeyboardNavigation.TabIndex="1" Name="TxtSubject" HorizontalAlignment="Left" BorderThickness="0" Height="19" Margin="145,30,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="337"/>
-        <TextBox Foreground="SlateGray" HorizontalAlignment="Left" IsReadOnly="True" BorderThickness="0" Height="19" Margin="91,1,0,0" TextWrapping="Wrap" Text="To:" VerticalAlignment="Top" Width="27"/>
-        <TextBox Foreground="SlateGray" HorizontalAlignment="Left" IsReadOnly="True" BorderThickness="0" Height="19" Margin="91,30,0,0" TextWrapping="Wrap" Text="Subject:" VerticalAlignment="Top" Width="54"/>
-        <Label Content="Label" HorizontalAlignment="Left" BorderThickness="1" BorderBrush="Gray" Margin="0,60,-3,0" VerticalAlignment="Top" Height="1" RenderTransformOrigin="0.5,0.5" Width="497">
+        <TextBox Foreground="Silver" AcceptsReturn="True" KeyboardNavigation.TabIndex="2" Name="TxtMsgContent"  HorizontalAlignment="Left" BorderThickness="0,0,0,0" Margin="0,53,0,0" TextWrapping="Wrap" Width="394"/>
+        <Button Foreground="SlateGray" Name="BtnSend" Click="Button_Click" IsTabStop="False" Content="Send" BorderThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="91" Height="52"/>
+        <TextBox KeyboardNavigation.TabIndex="0" Foreground="Silver" Name="TxtReceiverUsername" Focusable="True" HorizontalAlignment="Left" BorderThickness="0" Height="15" Margin="118,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="276"/>
+        <TextBox Foreground="Silver" MaxLength="30" KeyboardNavigation.TabIndex="1" Name="TxtSubject" HorizontalAlignment="Left" BorderThickness="0" Height="19" Margin="145,26,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="249"/>
+        <TextBox Foreground="SlateGray" HorizontalAlignment="Left" IsReadOnly="True" BorderThickness="0" Height="8" Margin="91,0,0,0" TextWrapping="Wrap" Text="To:" VerticalAlignment="Top" Width="27"/>
+        <TextBox Foreground="SlateGray" HorizontalAlignment="Left" IsReadOnly="True" BorderThickness="0" Height="19" Margin="91,26,0,0" TextWrapping="Wrap" Text="Subject:" VerticalAlignment="Top" Width="54"/>
+        <Label Content="Label" HorizontalAlignment="Left" BorderThickness="1" BorderBrush="Gray" Margin="0,52,-2,0" VerticalAlignment="Top" Height="1" RenderTransformOrigin="0.5,0.5" Width="396">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="-1"/>
